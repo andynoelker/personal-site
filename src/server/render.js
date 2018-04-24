@@ -15,6 +15,8 @@ export default (component) => `
       ${css}
       <link rel="manifest" href="/public/manifest.json">
       <link rel="shortcut icon" href="/public/favicon.ico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
       <title>Andy Noelker</title>
     </head>

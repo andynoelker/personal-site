@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Typography from 'material-ui/Typography';
 import { Switch, Route } from 'react-router-dom';
+import { withStyles } from 'material-ui/styles';
+import styles from './styles';
 import Home from './Home';
 import About from './About';
 import NoMatch from './NoMatch';
 import addEvent from '../utils/addEvent';
+import Sidebar from './Sidebar';
+import Header from './Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +19,7 @@ class App extends React.Component {
 
     this.state = {
       size,
+      mobileOpen: false,
     };
   }
 
@@ -21,6 +28,10 @@ class App extends React.Component {
       addEvent(window, 'resize', this.updateSize);
     }
   }
+
+  handleDrawerToggle = () => {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
+  };
 
   breakAt = (sizeCheck) => {
     const { size } = this.state;
@@ -65,15 +76,36 @@ class App extends React.Component {
   }
 
   render() {
-    return (<div>
-      <p>App is up and running</p>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>);
+    const { classes, theme } = this.props;
+
+    return (
+      <div className={classes.root}>
+        <Sidebar
+          classes={classes}
+          theme={theme}
+          handleDrawerToggle={this.handleDrawerToggle}
+          mobileOpen={this.state.mobileOpen}
+        />
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          <Header
+            classes={classes}
+            handleDrawerToggle={this.handleDrawerToggle}
+          />
+          <Switch>
+            <Route exact path="/" render={props => <Home {...this.props} {...props} />} />
+            <Route exact path="/about" render={props => <About {...this.props} {...props} />} />
+            <Route component={NoMatch} />
+          </Switch>
+        </main>
+    </div>
+    );
   }
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles, { withTheme: true })(App);
