@@ -42,6 +42,16 @@ const styles = theme => ({
       },
     },
   },
+  sidebarHeader: {
+    minHeight: '225px',
+  },
+  sidebarTitle: {
+    fontSize: '51px',
+    paddingRight: '15px',
+  },
+  firstName: {
+    paddingTop: '50px',
+  },
   primary: {},
   icon: {},
   selected: {},

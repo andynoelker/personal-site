@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import Typography from 'material-ui/Typography';
 import Hidden from 'material-ui/Hidden';
 import Divider from 'material-ui/Divider';
 import { MenuList, MenuItem } from 'material-ui/Menu';
@@ -16,7 +17,10 @@ class Sidebar extends React.Component {
 
     const drawer = (
       <div>
-        <div className={classes.toolbar} />
+        <div className={classes.sidebarHeader}>
+          <Typography align="right" variant="display1" className={`${classes.sidebarTitle} ${classes.firstName}`}>Andy</Typography>
+          <Typography align="right" variant="display1" className={classes.sidebarTitle}>Noelker</Typography>
+        </div>
         <MenuList>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={() => this.props.history.push('/')}>
             <ListItemIcon className={classes.icon}>
