@@ -11,10 +11,11 @@ const styles = theme => ({
     width: '100%',
   },
   appBar: {
+    display: 'none',
     position: 'absolute',
     marginLeft: drawerWidth,
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
     },
   },
   navIconHide: {
@@ -22,7 +23,12 @@ const styles = theme => ({
       display: 'none',
     },
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    ...theme.mixins.toolbar,
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
   drawerPaper: {
     width: drawerWidth,
     [theme.breakpoints.up('md')]: {

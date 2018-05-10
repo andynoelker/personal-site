@@ -1,11 +1,17 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from 'material-ui/IconButton';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
+  getPageName = () => {
+    const name = this.props.location.pathname.charAt(1).toUpperCase() + this.props.location.pathname.slice(2);
+    return name ? name : 'Andy Noelker';
+  }
+
   render() {
     const { classes, handleDrawerToggle } = this.props;
 
@@ -20,10 +26,13 @@ export default class Header extends React.Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" noWrap>                         Andy Noelker
+          <Typography variant="title" color="inherit" noWrap>
+            {this.getPageName()}
           </Typography>
         </Toolbar>
       </AppBar>
     );
   }
 }
+
+export default withRouter(Header);
