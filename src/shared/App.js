@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui/styles';
 import styles from './styles';
 import Home from './Home';
 import About from './About';
+import Portfolio from './Portfolio';
 import NoMatch from './NoMatch';
 import addEvent from '../utils/addEvent';
 import Sidebar from './Sidebar';
@@ -95,6 +96,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={props => <Home {...this.props} {...props} />} />
             <Route exact path="/about" render={props => <About {...this.props} {...props} />} />
+            <Route exact path="/portfolio" render={props => <Portfolio {...this.props} {...props} />} />
             <Route component={NoMatch} />
           </Switch>
         </main>
