@@ -3,7 +3,7 @@ import { StaticRouter as Router } from 'react-router-dom';
 import Context from 'react-context-component';
 import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
-import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles';
+import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
 import ReactDOMServer from 'react-dom/server';
 import { renderToString } from 'react-dom/server';
 import render from './render';

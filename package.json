@@ -1,5 +1,5 @@
 {
-  "name": "universal-app-boilerplate",
+  "name": "personal-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -33,8 +33,8 @@
     "webpack-cli": "^2.0.13"
   },
   "dependencies": {
-    "@material-ui/icons": "^1.0.0-beta.42",
-    "material-ui": "^1.0.0-beta.41",
+    "@material-ui/core": "^1.0.0",
+    "@material-ui/icons": "^1.0.0",
     "react": "^16.2.0",
     "react-context-component": "0.0.6",
     "react-dom": "^16.2.0",
