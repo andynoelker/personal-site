@@ -1,17 +1,8 @@
-const styles = theme => ({
+const styles = {
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    //overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+    maxWidth: '800px',
+    margin: '0 auto',
   },
-  gridList: {
-    width: 500,
-  },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
-  },
-});
+};
 
 export default styles;

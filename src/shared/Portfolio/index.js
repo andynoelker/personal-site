@@ -3,31 +3,41 @@ import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import Grid from '@material-ui/core/Grid';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import styles from './styles';
+import Item from './Item';
 
 const tileData = [
   {
     img: '/imagesource',
-    title: 'test',
-    author: 'Someone',
+    img_alt: '/imagesource',
+    title: 'first',
+    tech: 'React, Redux',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
     img: '/imagesource',
-    title: 'test',
-    author: 'Someone',
+    img_alt: '/imagesource',
+    title: 'second',
+    tech: 'React, Redux',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
     img: '/imagesource',
-    title: 'test',
-    author: 'Someone',
+    img_alt: '/imagesource',
+    title: 'third',
+    tech: 'React, Redux',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
     img: '/imagesource',
-    title: 'test',
-    author: 'Someone',
+    img_alt: '/imagesource',
+    title: 'fourth',
+    tech: 'React, Redux',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
 ]
 
@@ -36,29 +46,22 @@ class Portfolio extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
-        <GridList cellHeight={180} className={classes.gridList}>
-          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-            <ListSubheader component="div">December</ListSubheader>
-          </GridListTile>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img}>
+      <Grid container spacing={16} className={classes.root}>
+        {tileData.map(tile => (
+          <Grid key={tile.title} item xs={12} sm={6}>
+            <Item
+              title={tile.title}
+              description={tile.description}
+              tech={tile.tech}
+              image={tile.img_alt}
+            >
               <img src={tile.img} alt={tile.title} />
-              <GridListTileBar
-                title={tile.title}
-                subtitle={<span>by: {tile.author}</span>}
-                actionIcon={
-                  <IconButton className={classes.icon}>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+            </Item>
+          </Grid>
+        ))}
+      </Grid>
     );
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Portfolio);
+export default withStyles(styles)(Portfolio);

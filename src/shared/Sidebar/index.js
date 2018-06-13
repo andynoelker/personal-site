@@ -23,8 +23,6 @@ class Sidebar extends React.Component {
     const drawer = (
       <div>
         <div className={classes.sidebarHeader}>
-          <Typography align="right" variant="display1" className={`${classes.sidebarTitle} ${classes.firstName}`}>Andy</Typography>
-          <Typography align="right" variant="display1" className={classes.sidebarTitle}>Noelker</Typography>
         </div>
         <MenuList>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={() => this.props.history.push('/')}>

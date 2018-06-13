@@ -94,9 +94,9 @@ class App extends React.Component {
             handleDrawerToggle={this.handleDrawerToggle}
           />
           <Switch>
-            <Route exact path="/" render={props => <Home {...this.props} {...props} />} />
-            <Route exact path="/about" render={props => <About {...this.props} {...props} />} />
-            <Route exact path="/portfolio" render={props => <Portfolio {...this.props} {...props} />} />
+            <Route exact path="/" render={props => <Home {...props} />} />
+            <Route exact path="/about" render={props => <About {...props} />} />
+            <Route exact path="/portfolio" render={props => <Portfolio {...props} />} />
             <Route component={NoMatch} />
           </Switch>
         </main>
