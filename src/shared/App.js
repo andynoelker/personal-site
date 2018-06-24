@@ -8,6 +8,7 @@ import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
 import NoMatch from './NoMatch';
+import Contact from './Contact';
 import addEvent from '../utils/addEvent';
 import Sidebar from './Sidebar';
 import Header from './Header';
@@ -97,6 +98,7 @@ class App extends React.Component {
             <Route exact path="/" render={props => <Home {...props} />} />
             <Route exact path="/about" render={props => <About {...props} />} />
             <Route exact path="/portfolio" render={props => <Portfolio {...props} />} />
+            <Route exact path="/contact" render={props => <Contact {...props} />} />
             <Route component={NoMatch} />
           </Switch>
         </main>

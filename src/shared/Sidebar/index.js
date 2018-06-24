@@ -43,6 +43,12 @@ class Sidebar extends React.Component {
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Portfolio" />
           </MenuItem>
+          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/contact'} onClick={() => this.props.history.push('/contact')}>
+            <ListItemIcon className={classes.icon}>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
+          </MenuItem>
         </MenuList>
       </div>
     );
