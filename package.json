@@ -35,6 +35,7 @@
   "dependencies": {
     "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0",
+    "classnames": "^2.2.6",
     "react": "^16.2.0",
     "react-context-component": "0.0.6",
     "react-dom": "^16.2.0",
