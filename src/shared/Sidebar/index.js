@@ -11,9 +11,10 @@ import Divider from '@material-ui/core/Divider';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import HomeIcon from '@material-ui/icons/Home';
+import AboutIcon from '@material-ui/icons/AccountBox';
+import PortfolioIcon from '@material-ui/icons/Work';
+import ContactIcon from '@material-ui/icons/Mail';
 
 class Sidebar extends React.Component {
   render() {
@@ -23,29 +24,31 @@ class Sidebar extends React.Component {
     const drawer = (
       <div>
         <div className={classes.sidebarHeader}>
+          <Typography align="center" variant="display1" className={`${classes.sidebarTitle} ${classes.firstName}`}>Andy</Typography>
+          <Typography align="center" variant="display1" className={`${classes.sidebarTitle} ${classes.lastName}`}>Noelker</Typography>
         </div>
         <MenuList>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={() => this.props.history.push('/')}>
             <ListItemIcon className={classes.icon}>
-              <SendIcon />
+              <HomeIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
           </MenuItem>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/about'} onClick={() => this.props.history.push('/about')}>
             <ListItemIcon className={classes.icon}>
-              <DraftsIcon />
+              <AboutIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="About" />
           </MenuItem>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/portfolio'} onClick={() => this.props.history.push('/portfolio')}>
             <ListItemIcon className={classes.icon}>
-              <DraftsIcon />
+              <PortfolioIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Portfolio" />
           </MenuItem>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/contact'} onClick={() => this.props.history.push('/contact')}>
             <ListItemIcon className={classes.icon}>
-              <DraftsIcon />
+              <ContactIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
           </MenuItem>
