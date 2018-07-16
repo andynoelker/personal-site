@@ -87,7 +87,7 @@ class About extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className={classes.root}>
         <Description />
         <Grid container spacing={16} className={classes.root}>
           <Grid item xs={12} sm={4}>

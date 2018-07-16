@@ -1,6 +1,6 @@
-const styles = {
+const styles = theme => ({
   root: {
-    margin: '0 auto',
+    padding: theme.spacing.unit * 3,
   },
   block: {
     padding: 15,
@@ -9,6 +9,6 @@ const styles = {
   blockText: {
     margin: '15px 0',
   },
-};
+});
 
 export default styles;

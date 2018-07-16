@@ -38,7 +38,7 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+    //padding: theme.spacing.unit * 3,
   },
   menuItem: {
     '&$selected': {
@@ -55,7 +55,7 @@ const styles = theme => ({
   },
   sidebarHeader: {
     minHeight: '225px',
-    backgroundColor: theme.palette.primary.main,
+    //backgroundColor: theme.palette.primary.main,
     //backgroundColor: theme.palette.primary.light,
     //backgroundColor: theme.palette.primary.dark,
   },

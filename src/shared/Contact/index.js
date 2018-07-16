@@ -9,7 +9,7 @@ class Contact extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className={classes.root}>
         <Form classes={classes} />
       </div>
     )
