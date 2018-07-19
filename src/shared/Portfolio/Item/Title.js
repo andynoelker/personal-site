@@ -6,17 +6,19 @@ import InfoIcon from '@material-ui/icons/Info';
 export default class Title extends React.Component {
 
   render() {
-    const { classes, text, openDescription } = this.props;
-
+    const { classes, children } = this.props;
     return (
-      <div className={classes.title} onClick={openDescription}>
-        <Typography variant="title" className={classes.titleText}>{text}</Typography>
-        <div>
-          <IconButton className={classes.icon}>
-            <InfoIcon />
-          </IconButton>
-        </div>
-      </div>
+      <span className={classes.imageButton}>
+        <Typography
+          component="span"
+          variant="subheading"
+          color="inherit"
+          className={classes.imageTitle}
+        >
+          {children}
+          <span className={classes.imageMarked} />
+        </Typography>
+      </span>
     )
   }
 }

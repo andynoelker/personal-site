@@ -15,34 +15,22 @@ export default class Content extends React.Component {
     const { classes, handleClose, title, description, tech, image } = this.props;
 
     return (
-      <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={image}
+      <div>
+        <img
+          src={image}
           title={title}
+          className={classes.media}
         />
-        <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {title}
-          </Typography>
-          <Typography gutterBottom variant="subheading" component="h3">
-            Tech Used: {tech}
-          </Typography>
-          <Typography component="p">
-            {description}
-          </Typography>
-        </CardContent>
-        <CardActions className={classes.actions}>
-          <IconButton
-            color="primary"
-            className={classes.close}
-            aria-label="Close"
-            onClick={handleClose}
-          >
-            <CloseIcon />
-          </IconButton>
-        </CardActions>
-      </Card>
+        <Typography gutterBottom variant="headline" component="h2">
+          {title}
+        </Typography>
+        <Typography gutterBottom variant="subheading" component="h3">
+          Tech Used: {tech}
+        </Typography>
+        <Typography component="p">
+          {description}
+        </Typography>
+      </div>
     );
   }
 }

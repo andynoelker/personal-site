@@ -50,10 +50,9 @@ class Portfolio extends React.Component {
               title={tile.title}
               description={tile.description}
               tech={tile.tech}
-              image={tile.img_alt}
-            >
-              <img src={tile.img} alt={tile.title} />
-            </Item>
+              image={tile.img}
+              imageAlt={tile.img_alt}
+            />
           </Grid>
         ))}
       </Grid>

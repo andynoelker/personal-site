@@ -1,5 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import ButtonBase from '@material-ui/core/ButtonBase';
+import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 import Title from './Title';
 import Description from './Description';
@@ -21,26 +23,36 @@ class Item extends React.Component {
   }
 
   render() {
-    const { children, classes, title, description, tech, image } = this.props;
+    const { children, classes, title, description, tech, image, imageAlt } = this.props;
     const { open } = this.state;
 
     return (
       <div className={classes.root}>
-        {children}
-        <Title
-          text={title}
-          classes={classes}
-          openDescription={this.handleOpen}
+        <ButtonBase
+          focusRipple
+          key={title}
+          className={classes.image}
+          focusVisibleClassName={classes.focusVisible}
+          onClick={this.handleOpen}
+        >
+        <span
+          className={classes.imageSrc}
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
         />
-        <Description
-          open={open}
-          handleClose={this.handleClose}
-          title={title}
-          description={description}
-          tech={tech}
-          image={image}
-        />
-      </div>
+        <span className={classes.imageBackdrop} />
+        <Title classes={classes}>{title}</Title>
+      </ButtonBase>
+      <Description
+        open={open}
+        handleClose={this.handleClose}
+        title={title}
+        description={description}
+        tech={tech}
+        image={imageAlt}
+      />
+    </div>
     )
   }
 }
