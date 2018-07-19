@@ -83,7 +83,6 @@ class App extends React.Component {
     return (
       <div className={classes.root}>
         <Sidebar
-          classes={classes}
           theme={theme}
           handleDrawerToggle={this.handleDrawerToggle}
           mobileOpen={this.state.mobileOpen}

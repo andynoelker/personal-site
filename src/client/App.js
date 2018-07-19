@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import App from '../shared/App';
-import theme from '../shared/theme';
+import sharedTheme from '../shared/theme';
 
 export default class ClientApp extends React.Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ export default class ClientApp extends React.Component {
   }
 
   render() {
-    const theme = createMuiTheme(theme);
+    const theme = createMuiTheme(sharedTheme);
 
     return (
       <Router>

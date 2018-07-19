@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,6 +16,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AboutIcon from '@material-ui/icons/AccountBox';
 import PortfolioIcon from '@material-ui/icons/Work';
 import ContactIcon from '@material-ui/icons/Mail';
+import styles from './styles';
 
 class Sidebar extends React.Component {
   render() {
@@ -23,9 +25,9 @@ class Sidebar extends React.Component {
 
     const drawer = (
       <div>
-        <div className={classes.sidebarHeader}>
-          <Typography align="center" variant="display1" className={`${classes.sidebarTitle} ${classes.firstName}`}>Andy</Typography>
-          <Typography align="center" variant="display1" className={`${classes.sidebarTitle} ${classes.lastName}`}>Noelker</Typography>
+        <div className={classes.header}>
+          <Typography align="center" variant="display1" className={`${classes.title} ${classes.firstName}`}>Andy</Typography>
+          <Typography align="center" variant="display1" className={`${classes.title} ${classes.lastName}`}>Noelker</Typography>
         </div>
         <MenuList>
           <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={() => this.props.history.push('/')}>
@@ -90,4 +92,4 @@ class Sidebar extends React.Component {
   }
 }
 
-export default withRouter(Sidebar);
+export default withRouter(withStyles(styles)(Sidebar));

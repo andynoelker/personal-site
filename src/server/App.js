@@ -8,7 +8,7 @@ import ReactDOMServer from 'react-dom/server';
 import { renderToString } from 'react-dom/server';
 import render from './render';
 import App from '../shared/App';
-import theme from '../shared/theme';
+import shareTheme from '../shared/theme';
 
 const ErrorPage = () => <h1>Oops there was an error</h1>;
 
@@ -24,7 +24,7 @@ const reactApp = (req, res) => {
 
   // Create theme for server rendering of Material-UI
   const sheetsRegistry = new SheetsRegistry();
-  const theme = createMuiTheme(theme);
+  const theme = createMuiTheme(shareTheme);
   const generateClassName = createGenerateClassName();
 
   try {
