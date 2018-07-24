@@ -16,7 +16,7 @@ class Home extends React.Component {
           <Typography variant="headline" align="center" className={classes.headline}>
             Hi, I'm Andy Noelker.
           </Typography>
-          <Avatar alt="Andy Noelker" src="/static/images/profile.jpg" className={classes.avatar} />
+          <Avatar alt="Andy Noelker" src="/static/img/placeholder.png" className={classes.avatar} />
           <Typography variant="headline" align="center" className={classes.headline}>
             I'm a full-stack web developer.
           </Typography>

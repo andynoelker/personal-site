@@ -8,6 +8,7 @@ const DEV = process.env.NODE_ENV === 'development';
 const staticDir = DEV ? 'build' : 'static';
 const port = '1337';
 
+app.use('/static/img', express.static(path.join(process.cwd(), 'assets/img')));
 app.use('/static', express.static(path.join(process.cwd(), staticDir)));
 app.use(App);
 app.listen(port);

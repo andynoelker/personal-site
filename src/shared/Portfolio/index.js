@@ -9,29 +9,29 @@ import Item from './Item';
 
 const tileData = [
   {
-    img: '/imagesource',
-    img_alt: '/imagesource',
+    img: '/static/img/placeholder.png',
+    img_alt: '/static/img/placeholder.png',
     title: 'first',
     tech: 'React, Redux',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
-    img: '/imagesource',
-    img_alt: '/imagesource',
+    img: '/static/img/placeholder.png',
+    img_alt: '/static/img/placeholder.png',
     title: 'second',
     tech: 'React, Redux',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
-    img: '/imagesource',
-    img_alt: '/imagesource',
+    img: '/static/img/placeholder.png',
+    img_alt: '/static/img/placeholder.png',
     title: 'third',
     tech: 'React, Redux',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
   },
   {
-    img: '/imagesource',
-    img_alt: '/imagesource',
+    img: '/static/img/placeholder.png',
+    img_alt: '/static/img/placeholder.png',
     title: 'fourth',
     tech: 'React, Redux',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
