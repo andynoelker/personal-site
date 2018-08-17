@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import PageTitle from '../components/PageTitle';
 import Resume from './Resume';
 import Skills from './Skills';
 import Description from './Description';
@@ -88,6 +89,7 @@ class About extends React.Component {
 
     return (
       <div className={classes.root}>
+        <PageTitle>About</PageTitle>
         <Description />
         <Grid container spacing={16} className={classes.root}>
           <Grid item xs={12} sm={4}>

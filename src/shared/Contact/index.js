@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ajax from '../../utils/ajax';
 import styles from './styles';
 import Typography from '@material-ui/core/Typography';
+import PageTitle from '../components/PageTitle';
 import Form from './Form';
 import FormAlert from './FormAlert';
 import SocialIcon from './SocialIcon';
@@ -43,11 +44,7 @@ class Contact extends React.Component {
 
     return (
       <div className={classes.root}>
-        <Typography
-          align="center"
-          variant="headline"
-          className={classes.title}
-        >Contact</Typography>
+        <PageTitle>Contact</PageTitle>
         <div className={classes.underline}></div>
         <FormAlert classes={classes} error={this.state.error} alert={this.state.alert} />
         <Form classes={classes} onSubmit={this.handleSubmit} alert={this.state.alert} />
