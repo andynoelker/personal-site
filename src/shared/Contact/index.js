@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ajax from '../../utils/ajax';
 import styles from './styles';
 import Typography from '@material-ui/core/Typography';
+import PageWrapper from '../components/PageWrapper';
 import PageTitle from '../components/PageTitle';
 import Form from './Form';
 import FormAlert from './FormAlert';
@@ -43,7 +44,7 @@ class Contact extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <PageWrapper width={700}>
         <PageTitle>Contact</PageTitle>
         <div className={classes.underline}></div>
         <FormAlert classes={classes} error={this.state.error} alert={this.state.alert} />
@@ -59,7 +60,7 @@ class Contact extends React.Component {
             <LinkedIn className={classes.socialSVG} />
           </SocialIcon>
         </div>
-      </div>
+      </PageWrapper>
     )
   }
 }

@@ -1,7 +1,4 @@
 const styles = theme => ({
-  root: {
-    padding: theme.spacing.unit * 3,
-  },
   block: {
     padding: 15,
     marginBottom: 15,

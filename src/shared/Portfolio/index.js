@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import PageWrapper from '../components/PageWrapper';
 import PageTitle from '../components/PageTitle';
 import styles from './styles';
 import Item from './Item';
@@ -44,7 +45,7 @@ class Portfolio extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <PageWrapper>
         <PageTitle>Portfolio</PageTitle>
         <Grid container spacing={16} className={classes.root}>
           {tileData.map(tile => (
@@ -59,7 +60,7 @@ class Portfolio extends React.Component {
             </Grid>
           ))}
         </Grid>
-    </div>
+      </PageWrapper>
     );
   }
 }

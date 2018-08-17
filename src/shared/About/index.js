@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import PageWrapper from '../components/PageWrapper';
 import PageTitle from '../components/PageTitle';
 import Resume from './Resume';
 import Skills from './Skills';
@@ -88,7 +89,7 @@ class About extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <PageWrapper>
         <PageTitle>About</PageTitle>
         <Description />
         <Grid container spacing={16} className={classes.root}>
@@ -100,7 +101,7 @@ class About extends React.Component {
             <Timeline events={timelineData} />
           </Grid>
         </Grid>
-      </div>
+      </PageWrapper>
     )
   }
 }
