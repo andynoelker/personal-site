@@ -30,6 +30,7 @@ class Portfolio extends React.Component {
                 tech={tile.tech}
                 image={tile.img}
                 imageAlt={tile.img_alt}
+                website={tile.website}
               />
             </Grid>
           ))}

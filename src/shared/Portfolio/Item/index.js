@@ -23,7 +23,7 @@ class Item extends React.Component {
   }
 
   render() {
-    const { children, classes, title, description, tech, image, imageAlt } = this.props;
+    const { children, classes, title, description, tech, image, imageAlt, website } = this.props;
     const { open } = this.state;
 
     return (
@@ -51,6 +51,7 @@ class Item extends React.Component {
         description={description}
         tech={tech}
         image={imageAlt}
+        website={website}
       />
     </div>
     )
