@@ -27,7 +27,7 @@ export default class Bar extends React.Component {
 
     return (
         <Grid container spacing={0} className={classes.bar}>
-          <Grid item xs={2}><Typography variant="subheading">{title}</Typography></Grid>
+          <Grid item xs={2} className={classes.label}><Typography variant="subheading">{title}</Typography></Grid>
           {this.createBars()}
         </Grid>
     )

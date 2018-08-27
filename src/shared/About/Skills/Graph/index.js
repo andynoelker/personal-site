@@ -13,14 +13,6 @@ class Graph extends React.Component {
 
     return (
       <div className={classes.root}>
-        <Grid container spacing={0}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={2}><Typography variant="caption" className={classes.columnTitle}>Rookie</Typography></Grid>
-          <Grid item xs={2}><Typography variant="caption" className={classes.columnTitle}>Competent</Typography></Grid>
-          <Grid item xs={2}><Typography variant="caption" className={classes.columnTitle}>Pretty Good</Typography></Grid>
-          <Grid item xs={2}><Typography variant="caption" className={classes.columnTitle}>Great</Typography></Grid>
-          <Grid item xs={2}><Typography variant="caption" className={classes.columnTitle}>Awesome</Typography></Grid>
-        </Grid>
         {data.map(skill => (
           <Bar key={skill.title} classes={classes} length={skill.length} title={skill.title} />
         ))}

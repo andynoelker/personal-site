@@ -12,12 +12,15 @@ class Event extends React.Component {
 
     return (
       <div className={classes.root}>
-        <EventDate classes={classes} date={event.date} />
-        <Link classes={classes} />
+        <div className={classes.clockWrapper}>
+          <EventDate classes={classes} date={event.date} />
+          <Link classes={classes} />
+        </div>
         <Description
           classes={classes}
           text={event.desc}
           title={event.title}
+          location={event.location}
         />
       </div>
     );

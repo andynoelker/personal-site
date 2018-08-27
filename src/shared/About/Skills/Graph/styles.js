@@ -8,6 +8,9 @@ const styles = theme => ({
   bar: {
     margin: '15px 0',
   },
+  label: {
+    marginRight: '15px',
+  },
   filled: {
     backgroundColor: theme.palette.primary.main,
     width: '100%',
