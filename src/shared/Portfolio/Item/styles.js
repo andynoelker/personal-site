@@ -16,7 +16,7 @@ const styles = theme => ({
     '&:hover, &$focusVisible': {
       zIndex: 1,
       '& $imageBackdrop': {
-        opacity: 0.15,
+        opacity: 0.25,
       },
       '& $imageMarked': {
         opacity: 0,
@@ -54,7 +54,7 @@ const styles = theme => ({
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
+    opacity: 0.5,
     transition: theme.transitions.create('opacity'),
   },
   imageTitle: {

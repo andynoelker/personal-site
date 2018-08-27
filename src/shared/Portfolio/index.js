@@ -6,39 +6,10 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import PageWrapper from '../components/PageWrapper';
 import PageTitle from '../components/PageTitle';
+import PageDescription from '../components/PageDescription';
 import styles from './styles';
 import Item from './Item';
-
-const tileData = [
-  {
-    img: '/static/img/placeholder.png',
-    img_alt: '/static/img/placeholder.png',
-    title: 'first',
-    tech: 'React, Redux',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
-  },
-  {
-    img: '/static/img/placeholder.png',
-    img_alt: '/static/img/placeholder.png',
-    title: 'second',
-    tech: 'React, Redux',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
-  },
-  {
-    img: '/static/img/placeholder.png',
-    img_alt: '/static/img/placeholder.png',
-    title: 'third',
-    tech: 'React, Redux',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
-  },
-  {
-    img: '/static/img/placeholder.png',
-    img_alt: '/static/img/placeholder.png',
-    title: 'fourth',
-    tech: 'React, Redux',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum arcu placerat sagittis eleifend. Duis euismod eget dolor vel tempus. Aliquam erat volutpat. Curabitur blandit fermentum dictum. Proin id interdum ipsum, vel interdum justo. Vivamus et auctor eros. ',
-  },
-]
+import data from './data';
 
 class Portfolio extends React.Component {
   render() {
@@ -47,8 +18,11 @@ class Portfolio extends React.Component {
     return (
       <PageWrapper>
         <PageTitle>Portfolio</PageTitle>
+        <PageDescription>
+          I build web-based technologies professionally and on the side. Here is a sampling of some of my work. You can view more of my work on my <a href="https://github.com/andynoelker" target="_blank">GitHub profile</a>. I am also an active member of the programming Q&A site Stack Overflow and you can check out my contributions on my <a href="https://stackoverflow.com/users/5455309/andy-noelker" target="_blank">Stack Overflow profile</a>.
+        </PageDescription>
         <Grid container spacing={16} className={classes.root}>
-          {tileData.map(tile => (
+          {data.map(tile => (
             <Grid key={tile.title} item xs={12} sm={6}>
               <Item
                 title={tile.title}
