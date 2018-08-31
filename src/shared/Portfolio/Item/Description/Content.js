@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
+import Chip from '@material-ui/core/Chip';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 
@@ -25,7 +26,9 @@ export default class Content extends React.Component {
           {title}
         </Typography>
         <Typography gutterBottom variant="subheading" component="h3">
-          Tech Used: {tech}
+          {tech.map(t => (
+            <Chip key={t} className={classes.tech} label={t} variant="outlined" color="secondary" />
+          ))}
         </Typography>
         <Typography component="p">
           {description}
