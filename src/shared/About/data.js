@@ -43,56 +43,56 @@ const data = {
       desc: 'During and after my senior year of college I worked as a junior developer at Momentum Worldwide, a global marketing agency. While at Momentum, I worked extensively with HTML and Flash technologies. Primary work included programming Flash advertisement banners with rich media elements, developing interactive kiosks, building email newsletters, and creating video players. I worked for clients such as SeaWorld, Porsche, American Express, Sesame Place, Allergan, and Busch Gardens.',
     },
   ],
-  skills: [
-    {
-      title: 'PHP',
-      length: 5,
-    },
-    {
-      title: 'Javscript',
-      length: 5,
-    },
-    {
-      title: 'React',
-      length: 4,
-    },
-    {
-      title: 'Redux',
-      length: 4,
-    },
-    {
-      title: 'Node.js',
-      length: 3,
-    },
-    {
-      title: 'Laravel',
-      length: 4,
-    },
-    {
-      title: 'git',
-      length: 3,
-    },
-    {
-      title: 'Wordpress',
-      length: 3,
-    },
-    {
-      title: 'HTML',
-      length: 5,
-    },
-    {
-      title: 'CSS',
-      length: 4,
-    },
-    {
-      title: 'C#',
-      length: 1,
-    },
-    {
-      title: 'Webpack',
-      length: 3,
-    },
-  ],
+  skills: {
+    frontend: [
+      {
+        title: 'Javscript',
+      },
+      {
+        title: 'React',
+      },
+      {
+        title: 'Redux',
+      },
+      {
+        title: 'jQuery',
+      },
+      {
+        title: 'HTML',
+      },
+      {
+        title: 'CSS',
+      },
+    ],
+    backend: [
+      {
+        title: 'PHP',
+      },
+      {
+        title: 'Laravel',
+      },
+      {
+        title: 'Node.js',
+      },
+      {
+        title: 'MySQL',
+      },
+    ],
+    technology: [
+      {
+        title: 'git',
+      },
+      {
+        title: 'Webpack',
+      },
+      {
+        title: 'Apache',
+      },
+      {
+        title: 'Wordpress',
+      },
+    ],
+  },
 };
 
 export default data;

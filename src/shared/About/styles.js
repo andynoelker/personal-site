@@ -6,6 +6,10 @@ const styles = theme => ({
   blockText: {
     margin: '15px 0',
   },
+  skill: {
+    marginRight: theme.spacing.unit,
+    marginBottom: theme.spacing.unit,
+  },
 });
 
 export default styles;
