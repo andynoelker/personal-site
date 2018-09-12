@@ -2,11 +2,11 @@ const styles = theme => ({
   root: {
     backgroundColor: theme.palette.primary.dark,
     padding: theme.spacing.unit * 3,
+    height: '100vh',
     [theme.breakpoints.up('md')]: {
       //backgroundColor: theme.palette.primary.main,
       //backgroundColor: theme.palette.common.white,
       //backgroundColor: theme.palette.primary.light,
-      height: '100%',
       width: '100%',
       position: 'relative',
     },

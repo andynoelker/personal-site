@@ -80,6 +80,7 @@ class Sidebar extends React.Component {
           <Drawer
             variant="permanent"
             open
+            className={classes.sidebar}
             classes={{
               paper: classes.drawerPaper,
             }}

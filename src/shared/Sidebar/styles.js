@@ -4,6 +4,10 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  sidebar: {
+    height: '100vh',
+    position: 'fixed',
+  },
   drawerPaper: {
     width: theme.drawerWidth,
     //width: 540,

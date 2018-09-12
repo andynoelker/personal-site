@@ -24,6 +24,9 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: theme.drawerWidth,
+    },
   },
 });
 
