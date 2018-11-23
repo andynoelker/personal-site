@@ -6,6 +6,7 @@ coverage
 dist
 build
 static
+assets
 
 # Vim temporary files
 *~
