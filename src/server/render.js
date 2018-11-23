@@ -16,7 +16,7 @@ export default (html, css) => `
 
       <title>Andy Noelker</title>
     </head>
-    <body>
+    <body style="margin:0;">
       <div id="root">${html}</div>
       <style id="jss-server-side">${css}</style>
       <script type="application/javascript" src="${bundleUrl}"></script>
