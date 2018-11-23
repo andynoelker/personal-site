@@ -19,6 +19,11 @@ import ContactIcon from '@material-ui/icons/Mail';
 import styles from './styles';
 
 class Sidebar extends React.Component {
+  changePage = page => () => {
+    this.props.handleDrawerToggle();
+    this.props.history.push(page);
+  }
+
   render() {
     const { classes, theme, mobileOpen, handleDrawerToggle } = this.props;
     const page = this.props.location.pathname;
@@ -30,25 +35,25 @@ class Sidebar extends React.Component {
           <Typography align="center" variant="display1" className={`${classes.title} ${classes.lastName}`}>Noelker</Typography>
         </div>
         <MenuList>
-          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={() => this.props.history.push('/')}>
+          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/'} onClick={this.changePage('/')}>
             <ListItemIcon className={classes.icon}>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
           </MenuItem>
-          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/about'} onClick={() => this.props.history.push('/about')}>
+          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/about'} onClick={this.changePage('/about')}>
             <ListItemIcon className={classes.icon}>
               <AboutIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="About" />
           </MenuItem>
-          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/portfolio'} onClick={() => this.props.history.push('/portfolio')}>
+          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/portfolio'} onClick={this.changePage('/portfolio')}>
             <ListItemIcon className={classes.icon}>
               <PortfolioIcon />
             </ListItemIcon>
             <ListItemText classes={{ primary: classes.primary }} inset primary="Portfolio" />
           </MenuItem>
-          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/contact'} onClick={() => this.props.history.push('/contact')}>
+          <MenuItem classes={{ root: classes.menuItem, selected: classes.selected }} selected={page === '/contact'} onClick={this.changePage('/contact')}>
             <ListItemIcon className={classes.icon}>
               <ContactIcon />
             </ListItemIcon>
