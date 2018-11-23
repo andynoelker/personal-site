@@ -53,6 +53,7 @@ app.post('/contact', function (req, res) {
 });
 
 app.use('/static/img', express.static(path.join(process.cwd(), 'assets/img')));
+app.use('/static/pdf', express.static(path.join(process.cwd(), 'assets/pdf')));
 app.use('/static', express.static(path.join(process.cwd(), staticDir)));
 app.use(App);
 app.listen(port);

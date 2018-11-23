@@ -11,7 +11,7 @@ import Timeline from './Timeline';
 import styles from './styles';
 import data from './data';
 
-const resume = "/static/pdf/test.pdf";
+const resume = "/static/pdf/andy_noelker_resume.pdf";
 
 class About extends React.Component {
 
