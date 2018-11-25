@@ -19,10 +19,10 @@ class Portfolio extends React.Component {
       <PageWrapper>
         <PageTitle>Portfolio</PageTitle>
         <PageDescription>
-          I build web-based technologies professionally and on the side. Here is a sampling of some of my work. You can view more of my work on my <a href="https://github.com/andynoelker" target="_blank">GitHub profile</a>. I am also an active member of the programming Q&A site Stack Overflow and you can check out my contributions on my <a href="https://stackoverflow.com/users/5455309/andy-noelker" target="_blank">Stack Overflow profile</a>.
+          {data.description}
         </PageDescription>
         <Grid container spacing={16} className={classes.root}>
-          {data.map(tile => (
+          {data.projects.map(tile => (
             <Grid key={tile.title} item xs={12} sm={6}>
               <Item
                 title={tile.title}
