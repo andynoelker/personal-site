@@ -1,6 +1,7 @@
 const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.primary.dark,
+    //backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.palette.common.white,
     padding: theme.spacing.unit * 3,
     height: '100vh',
     [theme.breakpoints.up('md')]: {
@@ -21,7 +22,8 @@ const styles = theme => ({
   },
   headline: {
     fontSize: '60px',
-    color: theme.palette.common.white,
+    //color: theme.palette.common.white,
+    //color: theme.palette.primary.dark,
   },
   avatar: {
     margin: '0 auto',

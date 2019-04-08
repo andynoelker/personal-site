@@ -22,7 +22,7 @@ class Home extends React.Component {
           </Typography>
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             className={classes.button}
             onClick={() => this.props.history.push('/portfolio')}
           >

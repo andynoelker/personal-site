@@ -1,12 +1,12 @@
-import red from '@material-ui/core/colors/red';
-import indigo from '@material-ui/core/colors/indigo';
+import blueGrey from '@material-ui/core/colors/blueGrey';
+import pink from '@material-ui/core/colors/pink';
 
 const theme = {
   drawerWidth: 240,
-  //palette: {
-    //primary: red,
-    //secondary: indigo,
-  //}
+  palette: {
+    primary: blueGrey,
+    secondary: pink,
+  }
 };
 
 export default theme;
